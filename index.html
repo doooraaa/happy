@@ -13,9 +13,23 @@
 
   <!-- 1. Приветствие -->
   <header class="section hero">
+    <!-- Плавающие сердечки: --x позиция слева, --s размер, --d задержка, --t длительность -->
+    <div class="hearts" aria-hidden="true">
+      <span class="heart" style="--x:6%;  --s:1.25rem; --d:0s;   --t:9s;   --y:12%">❤️</span>
+      <span class="heart" style="--x:16%; --s:2rem;    --d:2.2s; --t:11s;  --y:55%">💗</span>
+      <span class="heart" style="--x:27%; --s:1.5rem;  --d:5s;   --t:10s;  --y:28%">💖</span>
+      <span class="heart" style="--x:38%; --s:1.1rem;  --d:1s;   --t:8s;   --y:80%">💕</span>
+      <span class="heart" style="--x:49%; --s:2.25rem; --d:3.5s; --t:12s;  --y:40%">❤️</span>
+      <span class="heart" style="--x:58%; --s:1.4rem;  --d:6.5s; --t:9.5s; --y:68%">💗</span>
+      <span class="heart" style="--x:68%; --s:1.8rem;  --d:0.8s; --t:10.5s;--y:18%">💖</span>
+      <span class="heart" style="--x:77%; --s:1.2rem;  --d:4.2s; --t:8.5s; --y:72%">💕</span>
+      <span class="heart" style="--x:86%; --s:2rem;    --d:7s;   --t:11.5s;--y:35%">❤️</span>
+      <span class="heart" style="--x:94%; --s:1.5rem;  --d:2.8s; --t:9s;   --y:60%">💗</span>
+    </div>
     <div class="container hero__inner">
+      <div class="hero__cake" aria-hidden="true">🎂</div>
       <h1>С днём рождения, мама!</h1>
-      <p class="lead">Листай вниз, там сюрприз!</p>
+      <p class="lead">Листай вниз, там сюрприз! 🎁</p>
       <a class="scroll-hint" href="#wish" aria-label="Перейти к поздравлению">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10l8 8 8-8"/></svg>
       </a>
@@ -25,19 +39,30 @@
   <!-- 2. Поздравление -->
   <section class="section wish" id="wish">
     <div class="container">
+      <div class="icon reveal" aria-hidden="true">💌</div>
       <p class="wish__text reveal">
-        Спасибо, что ты рядом — и в самые обычные дни, и в самые важные.
-        <span><br><br>Желаем тебе крепкого здоровья, финансового благополучия, чтобы решилась проблема с коленом по щелчку пальцев, чтобы учеба Алины радовала, крепких нервов, да и всего самого наилучшего!</span>
+        Спасибо, что ты рядом — и в самые обычные дни, и в самые важные. ❤️
+      </p>
+      <p class="wish__text wish__text--second reveal">
+        Желаем тебе крепкого здоровья, финансового благополучия, чтобы решилась проблема с коленом по щелчку пальцев, чтобы учеба Алины радовала, крепких нервов, да и всего самого наилучшего!
       </p>
     </div>
   </section>
+
+  <!-- Бегущая лента из эмодзи -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip__track">
+      <span>🎂🎈🎁🎉🥳❤️🌷🎂🎈🎁🎉🥳❤️🌷</span>
+      <span>🎂🎈🎁🎉🥳❤️🌷🎂🎈🎁🎉🥳❤️🌷</span>
+    </div>
+  </div>
 
   <!-- Голосовое поздравление (необязательно).
        Запишите голосовое, сохраните как audio/greeting.m4a (папку audio создайте рядом с photos),
        затем уберите эти скобки комментария:
   <section class="section voice">
     <div class="container reveal">
-      <h2>Послушай</h2>
+      <h2>🎙️ Послушай</h2>
       <audio controls preload="none" src="audio/greeting.m4a">Ваш браузер не поддерживает аудио.</audio>
     </div>
   </section>
@@ -46,20 +71,21 @@
   <!-- 3. Фотографии -->
   <main class="section photos">
     <div class="container">
+      <div class="icon reveal" aria-hidden="true">📸</div>
       <h2 class="reveal">Немного воспоминаний для памяти</h2>
-      <p class="photos__hint reveal">Нажми на фото, чтобы увеличить</p>
+      <p class="photos__hint reveal">Нажми на фото, чтобы увеличить 👆</p>
       <div class="gallery">
 
         <figure class="card reveal">
-          <button class="card__frame" type="button" aria-label="Открыть первое фото на весь экран"><img src="photo-1.jpg" alt="Мы с мамой — первое фото" width="1400" height="1050" loading="lazy"></button>
+          <button class="card__frame" type="button" data-badge="🥰" aria-label="Открыть первое фото на весь экран"><img src="photos/photo-1.jpg" alt="Мы с мамой — первое фото" width="1400" height="1050" loading="lazy"></button>
         </figure>
 
         <figure class="card card--portrait reveal">
-          <button class="card__frame" type="button" aria-label="Открыть второе фото на весь экран"><img src="photo-2.jpg" alt="Мы с мамой — второе фото" width="1050" height="1400" loading="lazy"></button>
+          <button class="card__frame" type="button" data-badge="💃" aria-label="Открыть второе фото на весь экран"><img src="photos/photo-2.jpg" alt="Мы с мамой — второе фото" width="724" height="1224" loading="lazy"></button>
         </figure>
 
-        <figure class="card reveal">
-          <button class="card__frame" type="button" aria-label="Открыть третье фото на весь экран"><img src="photo-3.jpg" alt="Мы с мамой — третье фото" width="1024" height="764" loading="lazy"></button>
+        <figure class="card card--portrait reveal">
+          <button class="card__frame" type="button" data-badge="🤗" aria-label="Открыть третье фото на весь экран"><img src="photos/photo-3.jpg" alt="Мы с мамой — третье фото" width="1050" height="1400" loading="lazy"></button>
         </figure>
 
       </div>
@@ -69,6 +95,7 @@
   <!-- 4. Финал -->
   <footer class="section finale">
     <div class="container finale__inner reveal">
+      <div class="finale__heart" aria-hidden="true">❤️</div>
       <p>С любовью,</p>
       <p>Даниил</p>
     </div>
